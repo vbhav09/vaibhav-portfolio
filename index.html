@@ -321,6 +321,12 @@
       machineLearningView.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>View both';
       machineLearningTop.appendChild(machineLearningView);
     }
+    const credentialGrid=document.querySelector('.badge-grid');
+    if(credentialGrid){
+      credentialGrid.insertAdjacentHTML('beforeend','<article class="credential-badge ai"><div class="badge-top"><span class="badge-logo"><img src="vaibhav-assets/python.svg" alt="Python REST API icon"></span><button class="credential-view certificate-view" type="button" data-image="vaibhav-assets/certificate-rest-api-flask-python.jpg" data-title="REST API with Flask and Python certificate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>View</button></div><div><h4>REST API with Flask and Python</h4><p>Infosys Springboard</p></div></article>');
+      const earnedCount=document.querySelector('.badge-heading > .mono');
+      if(earnedCount)earnedCount.textContent='08 earned';
+    }
     const closeCertificate=()=>{
       certificateModal.classList.remove('open');
       certificateModal.setAttribute('aria-hidden','true');
